@@ -28,7 +28,7 @@ export const getStore = () => {
   const composables = [applyMiddleware(...middleWares)];
   const enhancer = compose(...composables);
   const store = createStore(reducer, defaultState, enhancer);
-  console.log("saga applied");
+  console.log("store says - saga applied");
   initSagas(sagaMiddleware);
   return store;
 };
